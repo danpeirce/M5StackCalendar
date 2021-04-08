@@ -1,4 +1,5 @@
-int n=7;
+//int n=7;   // moved this to just before fill() and changed to const int
+             // does it really need global scope?
 #include <M5Core2.h>
 #include "calc.h"
 #include "7seg20.h"
@@ -175,6 +176,9 @@ void loop()
 
 }
 
+
+const int n=7;   // appears to be used in two functions 
+                 // fill() and startCalendar()
 void fill(int x)
 {
     M5.Lcd.setTextColor(dark,WHITE);
